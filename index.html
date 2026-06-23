@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Task Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <aside class="sidebar glass">
+      <div class="logo">
+        <div class="logo-icon"></div>
+        <h2>Taskify</h2>
+      </div>
+      <nav class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">All Tasks</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </nav>
+    </aside>
+
+    <main class="dashboard">
+      <header class="top-nav">
+        <div class="greeting">
+          <h1>Good Morning, <span>Creator</span></h1>
+          <p class="quote">"Small steps every day."</p>
+        </div>
+        <div class="profile-area">
+          <div class="avatar"></div>
+        </div>
+      </header>
+
+      <section class="task-section">
+        <form id="task-form" class="task-form glass">
+          <input type="text" id="task-input" placeholder="What needs to be done?" required autocomplete="off">
+          <select id="priority-input" class="priority-select">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+          <button type="submit" class="btn-primary">Add Task</button>
+        </form>
+
+        <div class="list-container">
+          <ul id="task-list" class="task-list">
+            </ul>
+          
+          <div id="empty-state" class="empty-state hidden">
+            <div class="empty-icon">✨</div>
+            <h3>You're all caught up!</h3>
+            <p>Enjoy your day or add a new task above.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
